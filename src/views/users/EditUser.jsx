@@ -7,7 +7,7 @@ import authService from '../../services/authService';
 
 export default function EditUser() {
     const { userId } = useParams();
-    const [ user, setUser ] = useState({});
+    const [ user, setUser ] = useState(null);
     const [ error, setError ] = useState(false);
     const navigate = useNavigate();
 
@@ -52,8 +52,9 @@ export default function EditUser() {
 
     return (
         <div className="form_container">
-            <form onSubmit={handleSubmit}>
+            
                 {error && <p>Something went wrong. Couldn't find your user</p>}
+                {user && <form onSubmit={handleSubmit}>
                 <label>username</label>
                 <input type="text" name="username" value={user.username} onChange={handleChange} required />
                 <label>profileImage:</label>
@@ -65,7 +66,7 @@ export default function EditUser() {
                 <label>Contact Me:</label>
                 <input type="text" name="contactInfo" required value={user.contactInfo} onChange={handleChange} />
                 <button type="submit" className="btn"><NavLink to="/users">Save changes</NavLink></button> 
-            </form>
+            </form>}
         </div>
     )
 }

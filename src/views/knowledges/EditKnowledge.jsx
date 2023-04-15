@@ -6,7 +6,7 @@ import axios from 'axios';
 
 export default function EditKnowledge() {
     const { knowledgeId } = useParams();
-    const [ knowledge, setKnowledge ] = useState({});
+    const [ knowledge, setKnowledge ] = useState(null);
     const [ error, setError ] = useState(false);
     const navigate = useNavigate();
 
@@ -25,7 +25,7 @@ export default function EditKnowledge() {
     useEffect(() => {
         getKnowledge();
         // eslint-disable-next-line
-    }, [knowledgeId]);
+    }, []);
 
     const handleChange = (e) => {
         setKnowledge(prev => {
@@ -40,7 +40,6 @@ export default function EditKnowledge() {
         e.preventDefault();
         try {
             await knowledgeService.editKnowledge(knowledgeId, knowledge); 
-            //await axios.put(`http://localhost:8080/courses/${courseId}`, course) Ale
             await axios.put(`http://localhost:8080/knowledges/${knowledgeId}`, knowledge)  
             navigate(`/knowledges/${knowledgeId}`)
             // toast 
@@ -52,8 +51,8 @@ export default function EditKnowledge() {
 
     return (
         <div className="form_container">
-            <form onSubmit={handleSubmit}>
                 {error && <p>Something went wrong. Couldn't find your knowledge</p>}
+            {knowledge && <form onSubmit={handleSubmit}>
                 <label>Knowledge title</label>
                 <input type="text" name="title" value={knowledge.title} onChange={handleChange} required />
                 <label>Knowledge image</label>
@@ -78,7 +77,7 @@ export default function EditKnowledge() {
                 <label>Contact me:</label>
                 <input type="text" name="contactMe" required value={knowledge.contactMe} onChange={handleChange} />
                 <button type="submit" className="btn">Save changes</button> 
-            </form>
+            </form>}
         </div>
     )
 }
