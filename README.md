@@ -3,10 +3,7 @@
 ## Description
 
 This application is called CoBrain. It is used for exchange knowledge with time to create a better Society
-
-//> Add a picture (logo, design, actual screen, gif, etc, whichever you prefer.)
 [<img src="./public/img/App.jpg">]()
-
 
 ---
 ## Instructions
@@ -22,25 +19,6 @@ To start the project run:
 ```bash
 npm run start
 ```
----
-
-## User stories (MVP)
-
-- User can sign up and create and account.
-- User can login.
-- User can log out.
-- User can create a Knowledge.
-- User can edit its Knowledge.
-- User can delete its Knowledge.
-
----
-
-## User stories (Backlog)
-
-- User can search for a category of Knowledge and location.
-- User can see its vote history.
-- User can filter Knowledge by Music.
-- User can filter Knowledge by Time.
 
 ---
 ## User stories 
@@ -50,18 +28,23 @@ npm run start
 - User can sign up and create a new account
 - User can login
 - User can log out
+- User can create a Knowledge.
+- User can edit its Knowledge.
+- User can delete its Knowledge.
+
 
 ### Backlog
 
-- User can ...
+- User can search for a category of Knowledge and location.
+- User can see its vote history.
+- User can filter Knowledge by Music.
+- User can filter Knowledge by Time.
 
 ---
 
 ## Useful links
 
-- [Presentation slides]()
-- [Backend repository]()
-- [Backend deploy]()
-- [Deployed app]()
-
-
+- [Presentation slides](https://slides.com/ricardmontfortromero/cobrain/edit)
+- [Backend repository](https://github.com/RicardMontfort90/backend-template-m3)
+- [Backend deploy](https://github.com/RicardMontfort90/backend-template-m3)
+- [Deployed app](https://cobrain.netlify.app/)
