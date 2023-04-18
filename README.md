@@ -5,7 +5,8 @@
 This application is called CoBrain. It is used for exchange knowledge with time to create a better Society
 
 > Add a picture (logo, design, actual screen, gif, etc, whichever you prefer.)
-!['./public/img/App.png](picture.png)
+![<img src="./public/img/App.png">]()
+
 
 ---
 ## Instructions
