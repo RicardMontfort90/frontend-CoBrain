@@ -1,11 +1,9 @@
-# Project's name
+# CoBrain
 
 ## Description
 
-This application is called XXX. It is used for ...
-
-> Add a picture (logo, design, actual screen, gif, etc, whichever you prefer.)
-![](picture.png)
+This application is called CoBrain. It is used for exchange knowledge with time to create a better Society
+[<img src="./public/img/App.jpg">]()
 
 ---
 ## Instructions
@@ -30,18 +28,23 @@ npm run start
 - User can sign up and create a new account
 - User can login
 - User can log out
+- User can create a Knowledge.
+- User can edit its Knowledge.
+- User can delete its Knowledge.
+
 
 ### Backlog
 
-- User can ...
+- User can search for a category of Knowledge and location.
+- User can see its vote history.
+- User can filter Knowledge by Music.
+- User can filter Knowledge by Time.
 
 ---
 
 ## Useful links
 
-- [Presentation slides]()
-- [Backend repository]()
-- [Backend deploy]()
-- [Deployed app]()
-
-
+- [Presentation slides](https://slides.com/ricardmontfortromero/cobrain/edit)
+- [Backend repository](https://github.com/RicardMontfort90/backend-template-m3)
+- [Backend deploy](https://github.com/RicardMontfort90/backend-template-m3)
+- [Deployed app](https://cobrain.netlify.app/)

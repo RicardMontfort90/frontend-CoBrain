@@ -81,8 +81,8 @@ import axios from 'axios';
 
 export default function EditUser() {
     const { userId } = useParams();
-    const [user, setUser] = useState({});
-    const [error, setError] = useState(false);
+    const [ user, setUser ] = useState({});
+    const [ error, setError ] = useState(false);
     const navigate = useNavigate();
 
     const getUser = async () => {
@@ -205,9 +205,9 @@ export default function EditUser() {
 
     return (
         <div className="form_container">
-            <form onSubmit={handleSubmit}>
+            
                 {error && <p>Something went wrong. Couldn't find your user</p>}
-                <label>Username</label>
+                <label>username</label>
                 <input type="text" name="username" value={user.username} onChange={handleChange} required />
                 <label>profileImage:</label>
                 <input type="text" name="profileImage" required value={user.profileImage} onChange={handleChange} />
@@ -217,9 +217,7 @@ export default function EditUser() {
                 <input type="text" name="city" required value={user.city} onChange={handleChange} />
                 <label>Contact Me:</label>
                 <input type="text" name="contactInfo" required value={user.contactInfo} onChange={handleChange} />
-                <button type="submit" className="btn">
-                    Save changes
-                </button>
+                <button type="submit" className="btn"><NavLink to="/users">Save changes</NavLink></button> 
             </form>
         </div>
     );
